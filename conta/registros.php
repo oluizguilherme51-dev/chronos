@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 session_name('CHRONOS_SESSION');
 session_start();
 
@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     } else {
 
-        $consulta = $conexao->prepare(
+        $consulta = $pdo->prepare(
             "SELECT id FROM usuarios WHERE email = ?"
         );
 
@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             try {
 
-                $consulta = $conexao->prepare(
+                $consulta = $pdo->prepare(
                     "INSERT INTO usuarios
                     (nome, email, senha, perfil)
                     VALUES (?, ?, ?, 'cliente')"
