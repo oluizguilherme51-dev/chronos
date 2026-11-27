@@ -938,3 +938,209 @@ body {
         height: 280px;
     }
 }
+
+/* Sacola de compras Chronos */
+
+.pagina-sacola {
+    padding-top: 55px;
+    padding-bottom: 80px;
+    min-height: 65vh;
+}
+
+.titulo-sacola {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.titulo-sacola h1 {
+    font-size: 65px;
+    color: var(--azul);
+    margin: 15px 0;
+}
+
+.titulo-sacola p {
+    font-size: 16px;
+}
+
+.mensagem-sacola {
+    background: #EDE6D9;
+    color: var(--azul);
+    border-left: 3px solid var(--azul);
+    padding: 15px;
+    margin-bottom: 25px;
+}
+
+.sacola-vazia {
+    text-align: center;
+    border: 1px solid var(--areia);
+    padding: 65px 25px;
+}
+
+.sacola-vazia h2 {
+    color: var(--azul);
+    font-size: 40px;
+    margin: 20px 0;
+}
+
+.sacola-vazia p {
+    margin-bottom: 30px;
+}
+
+.sacola-vazia .botao-chronos {
+    display: inline-block;
+}
+
+.item-sacola {
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr);
+    gap: 30px;
+    padding: 25px 0;
+    border-bottom: 1px solid var(--areia);
+}
+
+.imagem-sacola {
+    background: #EDE6D9;
+    border-radius: 100px 100px 0 0;
+    height: 230px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.imagem-sacola img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}
+
+.dados-sacola h2 {
+    color: var(--azul);
+    font-size: 35px;
+    margin: 8px 0;
+}
+
+.dados-sacola p {
+    font-size: 14px;
+}
+
+.preco-unitario {
+    color: var(--azul);
+    font-weight: 600;
+}
+
+.form-sacola {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.form-sacola label {
+    font-size: 13px;
+}
+
+.form-sacola input {
+    width: 65px;
+    padding: 9px;
+    background: transparent;
+    border: 1px solid var(--areia);
+    color: var(--azul);
+}
+
+.atualizar-sacola {
+    background: var(--azul);
+    color: var(--marfim);
+    border: 1px solid var(--azul);
+    padding: 10px 15px;
+    font-size: 12px;
+}
+
+.atualizar-sacola:hover {
+    background: transparent;
+    color: var(--azul);
+}
+
+.remover-sacola {
+    background: transparent;
+    color: var(--bronze);
+    border: none;
+    text-decoration: underline;
+    font-size: 12px;
+}
+
+.subtotal-sacola {
+    color: var(--azul);
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.resumo-sacola {
+    background: #EDE6D9;
+    border: 1px solid var(--areia);
+    padding: 30px;
+    margin-top: 25px;
+}
+
+.resumo-sacola h2 {
+    color: var(--azul);
+    font-size: 35px;
+    margin: 15px 0 30px;
+}
+
+.linha-resumo {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    gap: 10px;
+}
+
+.total-sacola {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.total-sacola strong {
+    font-size: 26px;
+    color: var(--azul);
+}
+
+.finalizar-sacola {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 17px;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.resumo-sacola .aviso-academico {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+
+    .titulo-sacola h1 {
+        font-size: 45px;
+    }
+
+    .item-sacola {
+        grid-template-columns: 110px minmax(0, 1fr);
+        gap: 15px;
+    }
+
+    .imagem-sacola {
+        height: 170px;
+        padding: 10px;
+    }
+
+    .dados-sacola h2 {
+        font-size: 27px;
+    }
+
+    .resumo-sacola {
+        padding: 20px;
+    }
+}
