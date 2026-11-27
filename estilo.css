@@ -1336,3 +1336,317 @@ body {
         font-size: 38px;
     }
 }
+
+/* Painel administrativo Chronos */
+
+.pagina-gestao {
+    padding-top: 55px;
+    padding-bottom: 80px;
+    min-height: 65vh;
+}
+
+.titulo-gestao {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.titulo-gestao h1 {
+    color: var(--azul);
+    font-size: 60px;
+    margin: 15px 0;
+}
+
+.titulo-gestao p {
+    font-size: 16px;
+}
+
+.cartao-gestao {
+    background: #EDE6D9;
+    border: 1px solid var(--areia);
+    border-radius: 220px 220px 0 0;
+    padding: 65px 30px 40px;
+    text-align: center;
+    height: 100%;
+}
+
+.cartao-gestao .numero-romano {
+    display: block;
+    font-size: 40px;
+}
+
+.cartao-gestao h2 {
+    color: var(--azul);
+    font-size: 42px;
+    margin: 15px 0;
+}
+
+.cartao-gestao p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.cartao-gestao .botao-chronos {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+
+    .titulo-gestao h1 {
+        font-size: 42px;
+    }
+
+    .cartao-gestao {
+        padding: 45px 20px 30px;
+    }
+}
+
+/* Gerenciamento de relógios Chronos */
+
+.formulario-gestao {
+    background: var(--branco);
+    border: 1px solid var(--areia);
+    padding: 35px;
+    margin-bottom: 50px;
+}
+
+.formulario-gestao h2,
+.listagem-gestao h2 {
+    color: var(--azul);
+    font-size: 40px;
+    margin: 15px 0 25px;
+}
+
+.formulario-gestao label {
+    display: block;
+    color: var(--azul);
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.formulario-gestao input,
+.formulario-gestao select,
+.formulario-gestao textarea {
+    width: 100%;
+    background: var(--marfim);
+    border: 1px solid var(--areia);
+    color: var(--onix);
+    padding: 13px;
+    font-family: inherit;
+    font-size: 14px;
+    outline-color: var(--azul);
+}
+
+.formulario-gestao small {
+    display: block;
+    color: var(--bronze);
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.formulario-gestao .botao-chronos {
+    margin-top: 15px;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.cancelar-gestao {
+    color: var(--azul);
+    margin-left: 20px;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+.listagem-gestao {
+    margin-top: 50px;
+}
+
+.tabela-gestao {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin-top: 25px;
+}
+
+.tabela-gestao thead {
+    background: var(--azul);
+    color: var(--marfim);
+}
+
+.tabela-gestao th {
+    padding: 18px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.tabela-gestao td {
+    padding: 15px;
+    border-bottom: 1px solid var(--areia);
+    vertical-align: middle;
+}
+
+.tabela-gestao tbody tr:hover {
+    background: #EDE6D9;
+}
+
+.tabela-gestao strong {
+    color: var(--azul);
+}
+
+.tabela-gestao small {
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.imagem-gestao {
+    width: 75px;
+    height: 95px;
+    object-fit: contain;
+    background: #EDE6D9;
+    border-radius: 45px 45px 0 0;
+    padding: 8px;
+    mix-blend-mode: multiply;
+}
+
+.acoes-gestao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.editar-gestao {
+    background: var(--azul);
+    color: var(--marfim);
+    border: 1px solid var(--azul);
+    padding: 9px 14px;
+    font-size: 12px;
+}
+
+.editar-gestao:hover {
+    background: transparent;
+    color: var(--azul);
+}
+
+.excluir-gestao {
+    background: transparent;
+    border: 1px solid var(--bronze);
+    color: var(--onix);
+    padding: 9px 14px;
+    font-size: 12px;
+}
+
+.excluir-gestao:hover {
+    background: var(--areia);
+}
+
+@media (max-width: 768px) {
+
+    .formulario-gestao {
+        padding: 20px;
+    }
+
+    .formulario-gestao h2,
+    .listagem-gestao h2 {
+        font-size: 32px;
+    }
+
+    .tabela-gestao {
+        min-width: 750px;
+    }
+}
+
+/* Histórico de vendas Chronos */
+
+.indicador-vendas {
+    background: #EDE6D9;
+    border: 1px solid var(--areia);
+    padding: 35px;
+    text-align: center;
+    height: 100%;
+}
+
+.indicador-vendas h2 {
+    color: var(--azul);
+    font-size: 45px;
+    margin: 15px 0 0;
+}
+
+.cartao-venda {
+    background: var(--branco);
+    border: 1px solid var(--areia);
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.cabecalho-venda {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    border-bottom: 1px solid var(--areia);
+    padding-bottom: 20px;
+}
+
+.cabecalho-venda h2 {
+    color: var(--azul);
+    font-size: 38px;
+    margin: 10px 0 0;
+}
+
+.data-venda {
+    color: var(--bronze);
+    font-size: 13px;
+}
+
+.dados-venda {
+    padding: 25px 0;
+}
+
+.dados-venda span {
+    display: block;
+    font-size: 12px;
+    color: var(--bronze);
+    margin-bottom: 8px;
+}
+
+.dados-venda strong {
+    display: block;
+    color: var(--azul);
+    font-size: 16px;
+    overflow-wrap: anywhere;
+}
+
+.dados-venda small {
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+    overflow-wrap: anywhere;
+}
+
+.cartao-venda .tabela-gestao {
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+
+    .indicador-vendas {
+        padding: 25px;
+    }
+
+    .indicador-vendas h2 {
+        font-size: 35px;
+    }
+
+    .cartao-venda {
+        padding: 20px;
+    }
+
+    .cabecalho-venda h2 {
+        font-size: 30px;
+    }
+}
