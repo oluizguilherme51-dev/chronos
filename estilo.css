@@ -1,0 +1,703 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@400;500;600;700&display=swap');
+
+:root {
+    --azul: #203D91;
+    --marfim: #F8F5ED;
+    --areia: #D9CBB6;
+    --bronze: #A48B6C;
+    --onix: #242722;
+    --branco: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--marfim);
+    color: var(--onix);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+h1, h2, h3 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.faixa-superior {
+    background: var(--azul);
+    color: var(--marfim);
+    text-align: center;
+    padding: 10px;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.cabecalho {
+    border-bottom: 1px solid var(--areia);
+    padding: 25px 5%;
+}
+
+.navegacao {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu-esquerdo,
+.menu-direito {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 12px;
+    color: var(--azul);
+}
+
+.menu-direito {
+    justify-content: flex-end;
+}
+
+.navegacao a:hover {
+    color: var(--bronze);
+}
+
+.identidade {
+    text-align: center;
+    color: var(--azul);
+}
+
+.logotipo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Georgia, serif;
+    font-size: 35px;
+    letter-spacing: 5px;
+}
+
+.relogio-logo {
+    display: inline-block;
+    position: relative;
+    width: 27px;
+    height: 27px;
+    border: 2px solid var(--azul);
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.relogio-logo::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 8px;
+    background: var(--azul);
+    top: 4px;
+    left: 11px;
+}
+
+.relogio-logo::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 2px;
+    background: var(--azul);
+    top: 11px;
+    left: 11px;
+    transform: rotate(-30deg);
+    transform-origin: left center;
+}
+
+.subtitulo-logo {
+    font-size: 8px;
+    letter-spacing: 4px;
+}
+
+.apresentacao {
+    padding: 65px 20px 45px;
+    text-align: center;
+}
+
+.legenda {
+    color: var(--bronze);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+
+.apresentacao h1 {
+    color: var(--azul);
+    font-size: clamp(42px, 6vw, 85px);
+    line-height: 0.98;
+    margin: 25px 0 35px;
+}
+
+.arco-principal {
+    max-width: 580px;
+    height: 400px;
+    margin: 0 auto 30px;
+    background: linear-gradient(
+        135deg, #E8DFCF, #D9CBB6
+    );
+    border-radius: 300px 300px 0 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arco-principal img {
+    width: 75%;
+    height: 90%;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}
+
+.link-editorial {
+    color: var(--azul);
+    border-bottom: 1px solid var(--bronze);
+    padding-bottom: 7px;
+    font-size: 13px;
+}
+
+.universo-chronos {
+    background: var(--azul);
+    padding: 65px 20px;
+    text-align: center;
+    color: var(--marfim);
+}
+
+.universo-chronos .legenda {
+    color: var(--areia);
+}
+
+.universo-chronos h2 {
+    font-size: 44px;
+    margin: 15px 0 40px;
+}
+
+.arco-colecao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--bronze);
+    border-radius: 150px 150px 0 0;
+    padding: 35px 15px 25px;
+    min-height: 270px;
+    color: var(--marfim);
+    transition: 0.3s;
+}
+
+.arco-colecao:hover {
+    background: var(--marfim);
+    color: var(--azul);
+}
+
+.numero-romano {
+    font-family: Georgia, serif;
+    color: var(--bronze);
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.arco-colecao h3 {
+    font-size: 28px;
+}
+
+.arco-colecao p {
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.catalogo {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+.titulo-catalogo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.titulo-catalogo h2 {
+    font-size: 60px;
+    color: var(--azul);
+    margin: 10px 0;
+}
+
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 0;
+    border-top: 1px solid var(--areia);
+    border-bottom: 1px solid var(--areia);
+}
+
+.filtros input,
+.filtros select {
+    background: transparent;
+    border: 1px solid var(--areia);
+    padding: 12px;
+    color: var(--azul);
+    outline-color: var(--azul);
+}
+
+.filtros input {
+    flex: 1;
+    min-width: 200px;
+}
+
+.botao-chronos {
+    border: 1px solid var(--azul);
+    background: var(--azul);
+    color: var(--marfim);
+    padding: 12px 25px;
+    transition: 0.3s;
+}
+
+.botao-chronos:hover {
+    background: var(--marfim);
+    color: var(--azul);
+}
+
+.limpar {
+    color: var(--azul);
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+.resultado {
+    color: var(--bronze);
+    font-size: 11px;
+    margin: 25px 0;
+}
+
+.peca {
+    height: 100%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--areia);
+}
+
+.arco-produto {
+    background: #EDE6D9;
+    border-radius: 150px 150px 0 0;
+    height: 270px;
+    padding: 25px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.arco-produto img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    transition: transform 0.4s;
+}
+
+.arco-produto:hover img {
+    transform: scale(1.08);
+}
+
+.categoria-peca {
+    font-size: 9px;
+    text-transform: uppercase;
+    color: var(--bronze);
+    letter-spacing: 2px;
+}
+
+.peca h3 {
+    color: var(--azul);
+    font-size: 28px;
+    margin: 8px 0 0;
+}
+
+.modelo {
+    min-height: 42px;
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+.valor {
+    font-weight: 600;
+    color: var(--onix);
+    font-size: 14px;
+    margin: 12px 0;
+}
+
+.disponibilidade {
+    color: #64745A;
+    font-size: 10px;
+}
+
+.conhecer-peca {
+    color: var(--azul);
+    border-bottom: 1px solid var(--bronze);
+    font-size: 12px;
+    padding-bottom: 4px;
+}
+
+.manifesto {
+    background: var(--areia);
+    color: var(--azul);
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.manifesto h2 {
+    font-size: 48px;
+    margin-top: 25px;
+}
+
+.manifesto .legenda {
+    color: var(--azul);
+}
+
+.mostrador {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    border: 2px solid var(--azul);
+    border-radius: 50%;
+    font-family: Georgia, serif;
+}
+
+.mostrador span {
+    position: absolute;
+    font-size: 14px;
+}
+
+.doze {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tres {
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.seis {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nove {
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.ponteiro-hora,
+.ponteiro-minuto {
+    position: absolute;
+    bottom: 50%;
+    left: calc(50% - 1px);
+    width: 2px;
+    background: var(--azul);
+    transform-origin: bottom center;
+}
+
+.ponteiro-hora {
+    height: 35px;
+    transform: rotate(-55deg);
+}
+
+.ponteiro-minuto {
+    height: 50px;
+    transform: rotate(55deg);
+}
+
+.centro {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: var(--azul);
+    border-radius: 50%;
+    top: calc(50% - 4px);
+    left: calc(50% - 4px);
+}
+
+.rodape {
+    background: var(--azul);
+    color: var(--marfim);
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.ornamento {
+    color: var(--bronze);
+    font-size: 25px;
+}
+
+.marca-rodape {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    letter-spacing: 7px;
+    margin: 15px 0;
+}
+
+.linha-rodape {
+    width: 100px;
+    height: 1px;
+    background: var(--bronze);
+    margin: 25px auto;
+}
+
+.rodape small {
+    font-size: 10px;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+
+    .navegacao {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .identidade {
+        order: -1;
+    }
+
+    .menu-esquerdo,
+    .menu-direito {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .arco-principal {
+        height: 300px;
+    }
+
+    .arco-produto {
+        height: 200px;
+        padding: 15px;
+    }
+
+    .arco-colecao {
+        min-height: 250px;
+    }
+
+    .titulo-catalogo h2 {
+        font-size: 45px;
+    }
+
+    .peca h3 {
+        font-size: 23px;
+    }
+
+}
+
+/* Ajustes de tipografia da Chronos */
+
+body {
+    font-size: 16px;
+}
+
+.faixa-superior {
+    font-size: 12px;
+    padding: 12px;
+}
+
+.menu-esquerdo,
+.menu-direito {
+    font-size: 15px;
+    font-weight: 500;
+    gap: 25px;
+}
+
+.logotipo {
+    font-size: 45px;
+    letter-spacing: 6px;
+}
+
+.relogio-logo {
+    width: 35px;
+    height: 35px;
+}
+
+.relogio-logo::before {
+    height: 11px;
+    top: 5px;
+    left: 15px;
+}
+
+.relogio-logo::after {
+    width: 11px;
+    top: 15px;
+    left: 15px;
+}
+
+.subtitulo-logo {
+    font-size: 10px;
+}
+
+.legenda {
+    font-size: 12px;
+}
+
+.arco-colecao p {
+    font-size: 14px;
+}
+
+.categoria-peca {
+    font-size: 11px;
+}
+
+.modelo {
+    font-size: 15px;
+}
+
+.valor {
+    font-size: 17px;
+}
+
+.disponibilidade {
+    font-size: 12px;
+}
+
+.conhecer-peca,
+.link-editorial {
+    font-size: 15px;
+}
+
+.rodape small {
+    font-size: 12px;
+}
+
+/* Página individual da peça */
+
+.pagina-peca {
+    padding-top: 45px;
+    padding-bottom: 80px;
+}
+
+.voltar-colecao {
+    display: inline-block;
+    color: var(--azul);
+    font-size: 14px;
+    margin-bottom: 35px;
+    border-bottom: 1px solid var(--bronze);
+    padding-bottom: 5px;
+}
+
+.moldura-relogio {
+    background: #EDE6D9;
+    border-radius: 300px 300px 0 0;
+    height: 540px;
+    padding: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.moldura-relogio img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}
+
+.informacoes-peca h1 {
+    font-size: 65px;
+    color: var(--azul);
+    margin: 15px 0 0;
+}
+
+.informacoes-peca h2 {
+    font-size: 35px;
+    color: var(--onix);
+    margin-bottom: 15px;
+}
+
+.referencia {
+    color: var(--bronze);
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.divisao-bronze {
+    width: 100%;
+    height: 1px;
+    background: var(--areia);
+    margin: 25px 0;
+}
+
+.descricao-relogio {
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.preco-relogio {
+    color: var(--azul);
+    font-size: 30px;
+    font-weight: 600;
+    margin: 25px 0 10px;
+}
+
+.estoque-relogio {
+    color: #64745A;
+    font-size: 14px;
+}
+
+.quantidade-relogio {
+    display: block;
+    width: 100px;
+    padding: 12px;
+    background: transparent;
+    border: 1px solid var(--areia);
+    margin: 10px 0 20px;
+}
+
+.botao-sacola {
+    width: 100%;
+    padding: 17px;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.aviso-academico {
+    color: #777;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+
+    .moldura-relogio {
+        height: 350px;
+        padding: 25px;
+    }
+
+    .informacoes-peca h1 {
+        font-size: 45px;
+    }
+
+    .informacoes-peca h2 {
+        font-size: 28px;
+    }
+
+    .preco-relogio {
+        font-size: 25px;
+    }
+}
