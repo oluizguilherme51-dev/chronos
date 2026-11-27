@@ -1,30 +1,141 @@
-function atualizarMostrador() {
+document.addEventListener("DOMContentLoaded", function () {
 
-    const agora = new Date();
+    // Validar quantidade dos relógios
 
-    const horas = agora.getHours();
-    const minutos = agora.getMinutes();
-    const segundos = agora.getSeconds();
+    const quantidades = document.querySelectorAll(
+        'input[name="quantidade"]'
+    );
 
-    const anguloHora = (horas % 12) * 30 + minutos * 0.5;
+    quantidades.forEach(function (campo) {
 
-    const anguloMinuto = minutos * 6 + segundos * 0.1;
+        campo.addEventListener("change", function () {
 
-    const ponteiroHora = document.querySelector('.ponteiro-hora');
+            const minimo = Number(campo.min || 1);
+            const maximo = Number(campo.max);
 
-    const ponteiroMinuto = document.querySelector('.ponteiro-minuto');
+            if (Number(campo.value) < minimo) {
+                campo.value = minimo;
+            }
 
-    if (ponteiroHora && ponteiroMinuto) {
+            if (campo.max && Number(campo.value) > maximo) {
 
-        ponteiroHora.style.transform =
-            `rotate(${anguloHora}deg)`;
+                campo.value = maximo;
 
-        ponteiroMinuto.style.transform =
-            `rotate(${anguloMinuto}deg)`;
+                alert("Quantidade máxima disponível em estoque.");
+            }
+
+        });
+
+    });
+
+
+    // Confirmar remoção da sacola
+
+    const botoesRemover = document.querySelectorAll(
+        'button[name="remover"]'
+    );
+
+    botoesRemover.forEach(function (botao) {
+
+        botao.addEventListener("click", function (evento) {
+
+            const confirmar = confirm(
+                "Deseja remover este relógio da sacola?"
+            );
+
+            if (!confirmar) {
+                evento.preventDefault();
+            }
+
+        });
+
+    });
+
+
+    // Validar confirmação de senha no cadastro
+
+    const formularioCadastro = document.querySelector(
+        'form:has(input[type="password"])'
+    );
+
+    if (formularioCadastro) {
+
+        const senhas = formularioCadastro.querySelectorAll(
+            'input[type="password"]'
+        );
+
+        if (senhas.length === 2) {
+
+            formularioCadastro.addEventListener(
+                "submit",
+                function (evento) {
+
+                    if (senhas[0].value !== senhas[1].value) {
+
+                        evento.preventDefault();
+
+                        alert("As senhas precisam ser iguais.");
+
+                        senhas[1].focus();
+                    }
+
+                }
+            );
+
+        }
 
     }
-}
 
-atualizarMostrador();
 
-setInterval(atualizarMostrador, 1000);
+    // Destacar a forma de pagamento
+
+    const pagamentos = document.querySelectorAll(
+        'input[name="pagamento"]'
+    );
+
+    pagamentos.forEach(function (pagamento) {
+
+        pagamento.addEventListener("change", function () {
+
+            document.querySelectorAll(
+                ".opcao-pagamento"
+            ).forEach(function (opcao) {
+
+                opcao.classList.remove("pagamento-selecionado");
+
+            });
+
+            if (pagamento.checked) {
+
+                pagamento.closest(".opcao-pagamento")
+                    .classList.add("pagamento-selecionado");
+
+            }
+
+        });
+
+    });
+
+
+    // Evitar pedidos duplicados
+
+    const botaoCompra = document.querySelector(
+        ".confirmar-compra"
+    );
+
+    if (botaoCompra && botaoCompra.form) {
+
+        botaoCompra.form.addEventListener(
+            "submit",
+            function () {
+
+                botaoCompra.disabled = true;
+
+                botaoCompra.textContent = "PROCESSANDO PEDIDO...";
+
+            }
+        );
+
+    }
+
+});

@@ -1650,3 +1650,15 @@ body {
         font-size: 30px;
     }
 }
+
+/* Interações JavaScript Chronos */
+
+.pagamento-selecionado {
+    background: #EDE6D9;
+    border-color: var(--azul);
+}
+
+.confirmar-compra:disabled {
+    opacity: 0.65;
+    cursor: wait;
+}
