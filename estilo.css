@@ -701,3 +701,197 @@ body {
         font-size: 25px;
     }
 }
+
+/* Cadastro e autenticação Chronos */
+
+.chronos-conta {
+    max-width: 1150px;
+    padding-top: 50px;
+    padding-bottom: 70px;
+}
+
+.chronos-titulo-conta {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.chronos-titulo-conta span {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #A58B58;
+}
+
+.chronos-titulo-conta h1 {
+    font-size: 38px;
+    font-weight: 500;
+    margin: 15px 0;
+}
+
+.chronos-titulo-conta p {
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.chronos-painel-conta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid #D8D2C5;
+}
+
+.chronos-imagem-conta {
+    display: flex;
+    flex-direction: column;
+    background: #171717;
+    color: #FFFFFF;
+}
+
+.chronos-imagem-conta img {
+    width: 100%;
+    height: 450px;
+    flex: 1;
+    object-fit: contain;
+    background: #F2F0EB;
+    padding: 35px;
+}
+
+.chronos-legenda-conta {
+    padding: 30px;
+}
+
+.chronos-legenda-conta span {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #B49A65;
+}
+
+.chronos-legenda-conta h2 {
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 15px 0 0;
+}
+
+.chronos-form-conta {
+    background: #FFFFFF;
+    color: #171717;
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.chronos-abas-conta {
+    display: flex;
+    gap: 25px;
+    border-bottom: 1px solid #D8D2C5;
+    margin-bottom: 30px;
+}
+
+.chronos-abas-conta a {
+    text-decoration: none;
+    color: #777777;
+    padding-bottom: 12px;
+    font-size: 15px;
+}
+
+.chronos-abas-conta .ativa {
+    color: #171717;
+    border-bottom: 2px solid #A58B58;
+    font-weight: 600;
+}
+
+.chronos-form-conta h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.chronos-form-conta p {
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.7;
+}
+
+.chronos-form-conta form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.chronos-form-conta label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.chronos-form-conta input {
+    width: 100%;
+    border: 1px solid #D8D2C5;
+    background: #FAF9F6;
+    color: #171717;
+    padding: 14px;
+    font-family: inherit;
+    font-size: 14px;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+.chronos-form-conta input:focus {
+    border-color: #A58B58;
+}
+
+.chronos-botao-conta {
+    width: 100%;
+    background: #171717;
+    color: #FFFFFF;
+    border: none;
+    padding: 18px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.chronos-botao-conta:hover {
+    background: #A58B58;
+    color: #171717;
+}
+
+.chronos-link-conta {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.chronos-link-conta a {
+    color: #171717;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.chronos-link-conta a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+
+    .chronos-painel-conta {
+        grid-template-columns: 1fr;
+    }
+
+    .chronos-imagem-conta img {
+        height: 280px;
+        padding: 20px;
+    }
+
+    .chronos-form-conta {
+        padding: 25px;
+    }
+
+    .chronos-titulo-conta h1 {
+        font-size: 30px;
+    }
+
+    .chronos-legenda-conta h2 {
+        font-size: 23px;
+    }
+}
